@@ -1,11 +1,14 @@
 {
-  "name": "example-typescript-package",
-  "version": "0.2.2",
-  "description": "",
+  "name": "multipassify-ts",
+  "version": "1.0.0",
+  "description": "This is an example TypeScript Package ready to be published on npm. It has been set up with automated tests and package publishing workflow using GitHub Actions CI/CD. It is made primarily for GitHub + VS Code (Windows / Mac / Linux) users who are about to write and publish their first TypeScript npm package. This package could serve as a starter / boilerplate / demo for them.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
   "types": "dist/types/index.d.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
@@ -16,41 +19,41 @@
     "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
     "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json",
     "clean": "node tools/cleanup",
+    "lint": "eslint --ignore-path .prettierignore \"./src/**/*.ts\"",
+    "format": "prettier \"src/**/*.ts\"",
+    "format:write": "npm run format -- -w",
+    "format:check": "npm run format -- --check",
     "package": "npm run build && npm pack",
     "test": "jest --no-cache --runInBand",
     "test:cov": "jest --coverage --no-cache --runInBand",
-    "addscope": "node tools/packagejson name @tomchen/example-typescript-package"
+    "addscope": "node tools/packagejson name @sjcobb2022/multipassify-ts"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "example",
-    "typescript",
-    "npm",
-    "package",
-    "sample",
-    "boilerplate",
-    "starter",
-    "demo",
-    "cjs",
-    "esm",
-    "umd"
-  ],
-  "author": "Tom Chen <tomchen.org@gmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/tomchen/example-typescript-package",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tomchen/example-typescript-package.git"
+    "url": "git+https://github.com/sjcobb2022/multipassify-ts.git"
   },
+  "keywords": [
+    "shopify",
+    "Shopify",
+    "multipass",
+    "typescript",
+    "tsc",
+    "esm",
+    "cjs",
+    "umd",
+    "npm",
+    "package"
+  ],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tomchen/example-typescript-package/issues"
+    "url": "https://github.com/sjcobb2022/multipassify-ts/issues"
   },
-  "dependencies": {},
+  "homepage": "https://github.com/sjcobb2022/multipassify-ts#readme",
+  "dependencies": {
+    "@types/node": "^18.11.0",
+    "crypto-browserify": "^3.12.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",

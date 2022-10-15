@@ -1,3 +1,3 @@
-import { Num } from './Num'
+import { Multipassify } from './Multipassify'
 
-export { Num }
+export { Multipassify }
