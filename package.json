@@ -1,6 +1,6 @@
 {
   "name": "multipassify-ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "This is an example TypeScript Package ready to be published on npm. It has been set up with automated tests and package publishing workflow using GitHub Actions CI/CD. It is made primarily for GitHub + VS Code (Windows / Mac / Linux) users who are about to write and publish their first TypeScript npm package. This package could serve as a starter / boilerplate / demo for them.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
