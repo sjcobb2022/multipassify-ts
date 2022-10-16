@@ -1,6 +1,6 @@
 # Multipassify
 
-```typescript
+```javascript
 // define or import multipass token from .env
 const SHOPIFY_MULTIPASS_TOKEN = '6fee2f4f64e3c4b35610786df324fdbc';
  
