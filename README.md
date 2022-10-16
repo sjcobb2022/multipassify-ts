@@ -18,9 +18,16 @@ const url = multipassify.getUrl(customerData, 'yourstore.myshopify.com')
 
 ```
 
+## Install
+
+```bash
+npm i multipassify-ts
+```
+
+
+
 Typescript bindings for using Shopify's multipass authentication system.
 
 Basic test suite included.
 
 Follow the the instructions [here](https://shopify.dev/api/multipass) to obtain multipass access. Please note that you need ShopifyPlus to access this feature.
-
